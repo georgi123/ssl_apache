@@ -11,3 +11,23 @@ SSLCertificateKeyFile /etc/httpd/ssl/apache.key
 openssl req -new -key <server>.key -out <server>.csr 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-centos-6
 http://serverfault.com/questions/42993/renew-ssl-certificate-with-apache
+> openssl x509 -in ssl/testingcert.crt -noout -enddate
+notAfter=Dec 30 11:10:42 2013 GMT
+> openssl req -new -key ssl/testingcert.key -out ssl/new.csr
+> openssl genrsa -out ssl/testingcert.key 2048
+
+Check your certificate signing request information:
+
+> openssl req -in ssl/new.csr -noout -text
+Certificate Request:
+Data:
+        Version: 0 (0x0)
+         Subject: C=ca, ST=Some-State, O=Internet Widgits Pty Ltd
+         Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                 Modulus (2048 bit):
+                    00:c6:3d:60:21:ac:a8:82:36:8c:f0:1b:98:fb:24:
+                    33:68:60:14:a0:c1:7d:be:8b:44:c3:81:02:ee:1d:
+                    1e:d4:22:5a:6e:67:b4:ed:de:c4:b1:ba:ec:70:be:
+          ...
