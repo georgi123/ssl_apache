@@ -10,3 +10,4 @@ SSLCertificateKeyFile /etc/httpd/ssl/apache.key
 
 openssl req -new -key <server>.key -out <server>.csr 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-centos-6
+http://serverfault.com/questions/42993/renew-ssl-certificate-with-apache
