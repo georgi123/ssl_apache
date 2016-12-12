@@ -35,3 +35,6 @@ https://discuss.pivotal.io/hc/en-us/articles/202653388-How-To-Renew-an-Expired-A
 https://itigloo.com/security/generate-an-openssl-certificate-request-with-sha-256-signature/
 openssl req -x509 -sha256 -nodes -days 1826 -newkey rsa:2048 -keyout /etc/httpd/ssl/redhat5.key -out /etc/httpd/ssl/redhat5.crt
 openssl req -out CSR.csr -key key_name.key -new -sha256
+
+
+https://www.tbs-certificates.co.uk/FAQ/en/192.html
