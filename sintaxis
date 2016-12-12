@@ -34,3 +34,4 @@ Data:
 https://discuss.pivotal.io/hc/en-us/articles/202653388-How-To-Renew-an-Expired-Apache-Web-Server-Self-Signed-Certificate-using-the-OpenSSL-Tool
 https://itigloo.com/security/generate-an-openssl-certificate-request-with-sha-256-signature/
 openssl req -x509 -sha256 -nodes -days 1826 -newkey rsa:2048 -keyout /etc/httpd/ssl/redhat5.key -out /etc/httpd/ssl/redhat5.crt
+openssl req -out CSR.csr -key key_name.key -new -sha256
