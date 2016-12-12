@@ -38,3 +38,8 @@ openssl req -out CSR.csr -key key_name.key -new -sha256
 
 
 https://www.tbs-certificates.co.uk/FAQ/en/192.html
+
+https://wiki.centos.org/HowTos/Https
+openssl genrsa -out /etc/httpd/ssl/redhat5.key 2048
+openssl req -new -key /etc/httpd/ssl/redhat5.key -out /etc/httpd/ssl/redhat5.csr -sha256
+openssl x509 -req -days 365 -in /etc/httpd/ssl/redhat5.csr -signkey /etc/httpd/ssl/redhat5.key -out /etc/httpd/ssl/redhat5.crt -sha256
