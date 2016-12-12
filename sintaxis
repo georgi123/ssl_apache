@@ -31,4 +31,6 @@ Data:
                     33:68:60:14:a0:c1:7d:be:8b:44:c3:81:02:ee:1d:
                     1e:d4:22:5a:6e:67:b4:ed:de:c4:b1:ba:ec:70:be:
           ...
-https://discuss.pivotal.io/hc/en-us/articles/202653388-How-To-Renew-an-Expired-Apache-Web-Server-Self-Signed-Certificate-using-the-OpenSSL-Toolhttps://itigloo.com/security/generate-an-openssl-certificate-request-with-sha-256-signature/
+https://discuss.pivotal.io/hc/en-us/articles/202653388-How-To-Renew-an-Expired-Apache-Web-Server-Self-Signed-Certificate-using-the-OpenSSL-Tool
+https://itigloo.com/security/generate-an-openssl-certificate-request-with-sha-256-signature/
+openssl req -x509 -sha256 -nodes -days 1826 -newkey rsa:2048 -keyout /etc/httpd/ssl/redhat5.key -out /etc/httpd/ssl/redhat5.crt
